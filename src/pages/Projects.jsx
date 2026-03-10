@@ -26,7 +26,7 @@ function Projects() {
         "A personal portfolio built with React and FastAPI showcasing projects, skills and experience.", // TODO: Update description
       tech_stack: "React, FastAPI, PostgreSQL, Tailwind",
       github_url: "https://github.com/Shamar12334",
-      live_url: "",
+      live_url: "https://www.shamar-weekes.com",
       image: portfolio,                                     // TODO: Replace null with imported image
     },
     {
