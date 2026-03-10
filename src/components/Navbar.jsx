@@ -6,9 +6,10 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      {/* Navbar container */}
+      <div className="flex items-center justify-between px-6 py-4 w-full max-w-6xl mx-auto">
         {/* Logo */}
-        <h1 className="text-white font-bold text-xl ml-0">Shamar Weekes</h1>
+        <h1 className="text-white font-bold text-xl flex-shrink-0">Shamar Weekes</h1>
 
         {/* Desktop links */}
         <div className="hidden md:flex gap-8">
