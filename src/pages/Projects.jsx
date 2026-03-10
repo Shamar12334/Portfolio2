@@ -1,5 +1,6 @@
 import portfolio from "../assets/portfolio.png";
 import vmmd from "../assets/IMG_5708.PNG";
+import care from "../assets/carelog.png";
 function Projects() {
   // =============================================
   // TODO: Replace with your actual projects
@@ -16,7 +17,7 @@ function Projects() {
       tech_stack: "FastAPI, PostgreSQL, React,Python",  // TODO: Update tech stack
       github_url: "https://github.com/Shamar12334/carelog-web",   // TODO: Update GitHub URL
       live_url: "https://carelog-landing.vercel.app/",                                    // TODO: Add live URL if available
-      image: null,                                     // TODO: Replace null with imported image
+      image: care,                                     // TODO: Replace null with imported image
     },
     {
       id: 2,
