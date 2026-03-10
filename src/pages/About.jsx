@@ -37,7 +37,7 @@ function About() {
 
           <p className="text-lg opacity-90 mb-4">
             💼 <span className="font-semibold">Experience:</span>{" "}
-            {about.years_of_experience}+ years
+            {about.years_of_experience}
           </p>
 
           <p className="opacity-80 leading-relaxed mb-8 text-lg">{about.bio}</p>
