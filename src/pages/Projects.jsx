@@ -1,4 +1,5 @@
 import portfolio from "../assets/portfolio.png";
+import vmmd from "../assets/IMG_5708.PNG";
 function Projects() {
   // =============================================
   // TODO: Replace with your actual projects
@@ -34,7 +35,7 @@ function Projects() {
       tech_stack: "C, ESP32,Arduino IDE",
       github_url:"",
       live_url: null,
-      image:null ,                                     // TODO: Replace null with imported image
+      image:vmmd ,                                     // TODO: Replace null with imported image
     },
   ];
 
