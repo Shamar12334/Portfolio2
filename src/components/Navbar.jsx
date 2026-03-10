@@ -6,13 +6,13 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      {/* Navbar container */}
-      <div className="flex items-center justify-between px-6 py-4 w-full max-w-6xl mx-auto">
-        {/* Logo */}
-        <h1 className="text-white font-bold text-xl flex-shrink-0">Shamar Weekes</h1>
+      {/* Full-width logo and container */}
+      <div className="flex items-center justify-between px-6 py-4 w-full">
+        {/* Logo always flush left */}
+        <h1 className="text-white font-bold text-xl">Shamar Weekes</h1>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex gap-8">
+        {/* Desktop links inside centered max-width */}
+        <div className="hidden md:flex gap-8 max-w-6xl mx-auto">
           <Link className="text-white/70 hover:text-white transition" to="/">Home</Link>
           <Link className="text-white/70 hover:text-white transition" to="/about">About</Link>
           <Link className="text-white/70 hover:text-white transition" to="/projects">Projects</Link>
