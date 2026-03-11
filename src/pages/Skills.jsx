@@ -10,15 +10,15 @@ import c from "../assets/skills/cee.png";
 
 function Skills() {
   const skills = [
-    { id: 1, skill_name: "Python", category: "Backend", image: python },
+    { id: 1, skill_name: "C / C++", category: "Systems", image: c },
     { id: 2, skill_name: "FastAPI", category: "Backend", image: fastapi },
     { id: 3, skill_name: "Flask", category: "Backend", image: flask },
-    { id: 4, skill_name: "PostgreSQL", category: "Database", image: postgres },
-    { id: 5, skill_name: "React", category: "Frontend", image: react },
-    { id: 6, skill_name: "JavaScript", category: "Frontend", image: javascript },
-    { id: 7, skill_name: "Java", category: "Systems", image: java },
-    { id: 8, skill_name: "TypeScript", category: "Frontend", image: typescript },
-    { id: 9, skill_name: "C / C++", category: "Systems", image: c },
+    { id: 4, skill_name: "Java", category: "Systems", image: java },
+    {id: 5, skill_name: "JavaScript", category: "Frontend", image: javascript },
+    { id: 6, skill_name: "Python", category: "Backend", image: python },
+    { id: 7, skill_name: "PostgreSQL", category: "Database", image: postgres },
+    { id: 8, skill_name: "React", category: "Frontend", image: react },
+    { id: 9, skill_name: "TypeScript", category: "Frontend", image: typescript },
   ];
 
   return (
