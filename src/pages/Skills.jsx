@@ -15,8 +15,8 @@ function Skills() {
     { id: 3, skill_name: "Flask", category: "Backend", image: flask },
     { id: 4, skill_name: "Java", category: "Systems", image: java },
     {id: 5, skill_name: "JavaScript", category: "Frontend", image: javascript },
-    { id: 6, skill_name: "Python", category: "Backend", image: python },
-    { id: 7, skill_name: "PostgreSQL", category: "Database", image: postgres },
+    { id: 6, skill_name: "PostgreSQL", category: "Database", image: postgres },
+    { id: 7, skill_name: "Python", category: "Backend", image: python },
     { id: 8, skill_name: "React", category: "Frontend", image: react },
     { id: 9, skill_name: "TypeScript", category: "Frontend", image: typescript },
   ];
