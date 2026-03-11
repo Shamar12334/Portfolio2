@@ -5,7 +5,7 @@ function About() {
     name: "Shamar Weekes",
     degree: "B.S. Computer Science",
     years_of_experience: "none",
-    bio: "I am a Computer Science student with a diverse technical background spanning full-stack development, IoT systems, AI integration, and cybersecurity. I have built production-ready applications using Python, FastAPI, React, and PostgreSQL. I have hands-on experience integrating hardware solutions like BLE beacons into real-world systems. I am actively seeking an internship where I can contribute across multiple domains, continue growing, and make a real impact alongside experienced engineers.",
+    bio: "I am a Computer Science student with a diverse technical background spanning full-stack development, IoT systems, AI integration, and cybersecurity. I have built production-ready applications using Python, FastAPI, React, and PostgreSQL. I have hands-on experience integrating hardware solutions like BLE beacons into real-world systems. I am actively seeking an internship where I can contribute across multiple domains, foster ongoing development, and make a real impact alongside experienced engineers.",
     resume_url: "/resume.pdf",
   };
 

@@ -13,7 +13,7 @@ function Projects() {
       id: 1,
       title: "Patient Care System", // TODO: Update title
       description:
-        "A full-stack application for monitoring staff rounds at hospitals,validating patients care.", // TODO: Update description
+        "A full-stack application for monitoring hospital staff rounds and validating patient care.", // TODO: Update description
       tech_stack: "FastAPI, PostgreSQL, React,Python",  // TODO: Update tech stack
       github_url: "https://github.com/Shamar12334/carelog-web",   // TODO: Update GitHub URL
       live_url: "https://carelog-landing.vercel.app/",                                    // TODO: Add live URL if available
@@ -32,7 +32,7 @@ function Projects() {
     {
       id: 3,
       title: "Vertical Mass Measuring Device",               // TODO: Add your third project
-      description: "Developed a device to record the weight of an object osilating back and forth during the launch of a rocket",
+      description: "Programmed an ESP32 microcontroller to control a device that calculates the mass of an unknown object through oscillatory motion during a rocket launch.",
       tech_stack: "C, ESP32,Arduino IDE",
       github_url:"",
       live_url: null,
