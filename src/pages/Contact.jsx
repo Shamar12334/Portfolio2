@@ -5,7 +5,7 @@ function Contact() {
         Contact Me
       </h1>
       <p className="text-lg opacity-70 mb-10 text-center max-w-md">
-        I am currently looking for internship opportunities. Feel free to reach out — I would love to connect.
+        I’d love to connect — feel free to reach out.
       </p>
       
         <a href="https://linkedin.com/in/shamar-weekes"
