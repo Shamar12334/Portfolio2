@@ -37,6 +37,28 @@ const projects = [
   },
   {
     id: 4,
+    title: "Gamified Habit Tracker",
+    description:
+      "RPG-style habit tracking app built as a capstone project. Users build a character, complete daily quests, unlock achievements, and compete on a leaderboard as they level up through habit completion.",
+    tech_stack: "React, Python, Django, Node.js",
+    github_url: "https://github.com/bryanfernandez-eng/gamified-habit-tracker",
+    live_url: null,
+    image: null,
+    placeholder: { icon: "🎮", label: "Capstone Project" },
+  },
+  {
+    id: 5,
+    title: "Web Status Monitor",
+    description:
+      "Tool for monitoring the uptime and status of web services, alerting when sites go down.",
+    tech_stack: "JavaScript",
+    github_url: "https://github.com/Shamar12334/web-status-monitor",
+    live_url: null,
+    image: null,
+    placeholder: { icon: "📡", label: "Dev Tool" },
+  },
+  {
+    id: 6,
     title: "Vertical Mass Measuring Device",
     description:
       "Programmed an ESP32 microcontroller to calculate the mass of an unknown object through oscillatory motion — designed to operate during a rocket launch.",
@@ -59,8 +81,8 @@ function ProjectCard({ project }) {
         />
       ) : (
         <div className="w-full h-36 bg-gray-50 border-b border-gray-100 flex flex-col items-center justify-center gap-2">
-          <span className="text-3xl">🛡️</span>
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Security Tool</span>
+          <span className="text-3xl">{project.placeholder?.icon ?? "💻"}</span>
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">{project.placeholder?.label ?? "Project"}</span>
         </div>
       )}
 
