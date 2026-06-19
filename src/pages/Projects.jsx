@@ -8,8 +8,8 @@ const projects = [
     id: 1,
     title: "CareLog Systems",
     description:
-      "Founded and engineered a BLE-based patient care validation system for healthcare facilities. Built real-time indoor positioning, automated staff round logging, compliance monitoring dashboards, and a scalable FastAPI + PostgreSQL backend — eliminating manual documentation and improving audit readiness. Designed to scale across multiple locations.",
-    tech_stack: "React, FastAPI, PostgreSQL, Python, BLE",
+      "Founded and engineered a patient care validation system for healthcare facilities. Built real-time staff round logging, indoor positioning, compliance monitoring dashboards, and a scalable FastAPI + PostgreSQL backend — eliminating manual documentation and improving audit readiness. Designed to scale across multiple locations.",
+    tech_stack: "React, FastAPI, PostgreSQL, Python",
     github_url: "https://github.com/Shamar12334/carelog-web",
     live_url: "https://www.carelogsystems.com",
     image: care,

@@ -40,7 +40,7 @@ function About() {
 
             <p className="text-gray-600 leading-relaxed text-base mb-8">
               CS student at FIU with hands-on experience in full-stack development, ML, IoT, and cybersecurity.
-              I founded CareLog Systems — a BLE-based patient care platform built for healthcare facilities. I've also contributed to open source, merging a PR into Kestra (10k+ GitHub stars),
+              I founded CareLog Systems — a patient care validation platform built for healthcare facilities. I've also contributed to open source, merging a PR into Kestra (10k+ GitHub stars),
               and built an ML activity recognition system with 92% accuracy. I'm actively seeking an internship
               where I can make a real impact.
             </p>
