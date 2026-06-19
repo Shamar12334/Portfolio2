@@ -71,15 +71,14 @@ function Home() {
                   <img src={project.image} alt={project.title} className="w-full h-36 object-cover" />
                 ) : (
                   <div className="w-full h-36 bg-gray-50 flex flex-col items-center justify-center gap-1">
-                    <span className="text-2xl">🛡️</span>
-                    <span className="text-xs text-gray-400 font-medium uppercase tracking-widest">Security Tool</span>
+                      <span className="text-xs text-gray-400 font-medium uppercase tracking-widest">Security Tool</span>
                   </div>
                 )}
 
                 <div className="p-5 flex flex-col flex-1">
                   {project.hackathon && (
                     <span className="inline-flex items-center gap-1 self-start mb-2 px-2 py-0.5 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-                      🏆 {project.hackathon}
+                      {project.hackathon}
                     </span>
                   )}
                   <h3 className="text-base font-bold text-gray-900 mb-1">{project.title}</h3>

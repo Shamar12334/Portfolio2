@@ -88,8 +88,7 @@ function ProjectCard({ project }) {
       {project.image ? (
         <img src={project.image} alt={project.title} className="w-full h-44 object-cover" />
       ) : (
-        <div className="w-full h-36 bg-gray-50 border-b border-gray-100 flex flex-col items-center justify-center gap-2">
-          <span className="text-3xl">{project.placeholder?.icon ?? "💻"}</span>
+        <div className="w-full h-36 bg-gray-50 border-b border-gray-100 flex items-center justify-center">
           <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">{project.placeholder?.label ?? "Project"}</span>
         </div>
       )}
@@ -97,7 +96,7 @@ function ProjectCard({ project }) {
       <div className="p-6 flex flex-col flex-1">
         {project.hackathon && (
           <span className="inline-flex items-center gap-1.5 self-start mb-3 px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-            🏆 {project.hackathon}
+            {project.hackathon}
           </span>
         )}
         <h2 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h2>
@@ -165,10 +164,10 @@ function Projects() {
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold rounded-full">
-                      🚀 Founder & Engineer
+                      Founder & Engineer
                     </span>
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-50 border border-green-200 text-green-700 text-xs font-semibold rounded-full">
-                      ● Live
+                      Live
                     </span>
                   </div>
 

@@ -60,7 +60,7 @@ function Hero() {
             <p className="text-gray-400 mt-0.5">Projects Shipped</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-gray-900">🏆 1</p>
+            <p className="text-2xl font-bold text-gray-900">1</p>
             <p className="text-gray-400 mt-0.5">Hackathon Win</p>
           </div>
           <div>
