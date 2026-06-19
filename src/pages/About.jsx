@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import shamar from "../assets/shamar.jpeg";
 
 function About() {
+  useEffect(() => { document.title = "About | Shamar Weekes"; }, []);
+
   return (
     <section className="min-h-screen bg-white py-32 px-6 lg:px-28">
       <div className="max-w-5xl mx-auto">

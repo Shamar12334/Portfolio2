@@ -1,4 +1,8 @@
+import { useEffect } from "react";
+
 function Contact() {
+  useEffect(() => { document.title = "Contact | Shamar Weekes"; }, []);
+
   return (
     <section className="min-h-screen bg-white py-32 px-6 lg:px-28">
       <div className="max-w-5xl mx-auto">

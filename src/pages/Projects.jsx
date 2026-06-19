@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import portfolio from "../assets/portfolio.png";
 import vmmd from "../assets/IMG_5708.PNG";
 import care from "../assets/carelog.png";
@@ -113,6 +114,8 @@ function ProjectCard({ project }) {
 }
 
 function Projects() {
+  useEffect(() => { document.title = "Projects | Shamar Weekes"; }, []);
+
   return (
     <section className="min-h-screen bg-white py-32 px-6 lg:px-28">
       <div className="max-w-5xl mx-auto">
