@@ -1,57 +1,58 @@
 import shamar from "../assets/shamar.jpeg";
 
 function About() {
-  const about = {
-    name: "Shamar Weekes",
-    degree: "B.S. Computer Science",
-    years_of_experience: "none",
-    bio: "I am a Computer Science student with a diverse technical background spanning full-stack development, IoT systems, AI integration, and cybersecurity. I have built production-ready applications using Python, FastAPI, React, and PostgreSQL. I have hands-on experience integrating hardware solutions like BLE beacons into real-world systems. I am actively seeking an internship where I can contribute across multiple domains, foster ongoing development, and make a real impact alongside experienced engineers.",
-    resume_url: "/resume.pdf",
-  };
-
   return (
-    <section className="min-h-screen bg-black text-white py-24 px-6 lg:px-32">
-      {/* Heading */}
-      <h1 className="text-center text-5xl font-extrabold mb-20 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-        About Me
-      </h1>
+    <section className="min-h-screen bg-white py-32 px-6 lg:px-28">
+      <div className="max-w-5xl mx-auto">
 
-      <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
-        {/* Image Section */}
-        <div className="relative">
-          <div className="absolute inset-0 blur-3xl bg-purple-600/30 rounded-full"></div>
-          <img
-            src={shamar}
-            alt="Profile"
-            className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-3xl object-cover shadow-2xl border border-white/10"
-          />
-        </div>
+        <p className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-4">About</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-16">
+          Who I am
+        </h1>
 
-        {/* Text Content */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-3xl shadow-xl max-w-xl">
-          <h2 className="text-4xl font-bold mb-4">{about.name}</h2>
+        <div className="flex flex-col lg:flex-row items-start gap-16">
 
-          <p className="text-lg opacity-90 mb-2">
-            🎓 <span className="font-semibold">Degree:</span> {about.degree}
-          </p>
+          <div className="flex-shrink-0">
+            <img
+              src={shamar}
+              alt="Shamar Weekes"
+              className="w-56 h-56 rounded-2xl object-cover border border-gray-100 shadow-sm"
+            />
+          </div>
 
-          <p className="text-lg opacity-90 mb-4">
-            💼 <span className="font-semibold">Experience:</span>{" "}
-            {about.years_of_experience}
-          </p>
+          <div className="flex-1">
+            <h2 className="text-2xl font-bold text-gray-900 mb-1">Shamar Weekes</h2>
+            <p className="text-blue-600 font-medium mb-6">Full-Stack Developer · Cybersecurity · AI</p>
 
-          <p className="opacity-80 leading-relaxed mb-8 text-lg">{about.bio}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <p className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-1">Degree</p>
+                <p className="text-gray-800 font-semibold">B.S. Computer Science</p>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <p className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-1">Focus</p>
+                <p className="text-gray-800 font-semibold">Full-Stack · Security · IoT</p>
+              </div>
+            </div>
 
-          {about.resume_url && (
-            
-              <a href={about.resume_url}
+            <p className="text-gray-600 leading-relaxed text-base mb-8">
+              I'm a Computer Science student with a background spanning full-stack development,
+              IoT systems, AI integration, and cybersecurity. I've built production-ready applications
+              using Python, FastAPI, React, and PostgreSQL, and have hands-on experience integrating
+              hardware like BLE beacons into real-world systems. I'm actively seeking an internship
+              where I can contribute across multiple domains and make a real impact alongside experienced engineers.
+            </p>
+
+            <a
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-xl text-lg font-semibold transition inline-block shadow-md"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-700 transition-colors"
             >
-              View Resume
+              View Resume ↗
             </a>
-          )}
+          </div>
+
         </div>
       </div>
     </section>

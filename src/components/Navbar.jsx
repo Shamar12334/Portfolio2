@@ -1,42 +1,60 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/projects", label: "Projects" },
+  { to: "/skills", label: "Skills" },
+  { to: "/contact", label: "Contact" },
+];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      {/* Full-width logo and container */}
-      <div className="flex items-center justify-between px-6 py-4 w-full">
-        {/* Logo always flush left */}
-        <h1 className="text-white font-bold text-xl">Shamar Weekes</h1>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* Desktop links inside centered max-width */}
-        <div className="hidden md:flex gap-8 max-w-6xl mx-auto">
-          <Link className="text-white/70 hover:text-white transition" to="/">Home</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/about">About</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/projects">Projects</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/skills">Skills</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/contact">Contact</Link>
+        <Link to="/" className="text-gray-900 font-bold text-base tracking-tight">
+          Shamar Weekes
+        </Link>
+
+        <div className="hidden md:flex gap-8">
+          {links.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              className={`text-sm font-medium transition-colors ${
+                pathname === to ? "text-gray-900" : "text-gray-400 hover:text-gray-700"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
-        {/* Hamburger */}
-        <div
-          className="md:hidden text-white text-2xl cursor-pointer"
+        <button
+          className="md:hidden text-gray-700 text-xl"
           onClick={() => setIsOpen(!isOpen)}
         >
-          ☰
-        </div>
+          {isOpen ? "✕" : "☰"}
+        </button>
       </div>
 
-      {/* Mobile dropdown */}
       {isOpen && (
-        <div className="md:hidden flex flex-col bg-black/95 px-6 pb-4 gap-4">
-          <Link className="text-white/70 hover:text-white transition" to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/about" onClick={() => setIsOpen(false)}>About</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/skills" onClick={() => setIsOpen(false)}>Skills</Link>
-          <Link className="text-white/70 hover:text-white transition" to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4">
+          {links.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       )}
     </nav>

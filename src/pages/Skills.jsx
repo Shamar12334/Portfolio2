@@ -8,45 +8,50 @@ import java from "../assets/skills/hd-java-programming-logo.svg.png";
 import typescript from "../assets/skills/ts.png";
 import c from "../assets/skills/cee.png";
 
-function Skills() {
-  const skills = [
-    { id: 1, skill_name: "C / C++", category: "Systems", image: c },
-    { id: 2, skill_name: "FastAPI", category: "Backend", image: fastapi },
-    { id: 3, skill_name: "Flask", category: "Backend", image: flask },
-    { id: 4, skill_name: "Java", category: "Systems", image: java },
-    {id: 5, skill_name: "JavaScript", category: "Frontend", image: javascript },
-    { id: 6, skill_name: "PostgreSQL", category: "Database", image: postgres },
-    { id: 7, skill_name: "Python", category: "Backend", image: python },
-    { id: 8, skill_name: "React", category: "Frontend", image: react },
-    { id: 9, skill_name: "TypeScript", category: "Frontend", image: typescript },
-  ];
+const skills = [
+  { id: 1, name: "Python",      category: "Backend",   image: python },
+  { id: 2, name: "JavaScript",  category: "Frontend",  image: javascript },
+  { id: 3, name: "TypeScript",  category: "Frontend",  image: typescript },
+  { id: 4, name: "React",       category: "Frontend",  image: react },
+  { id: 5, name: "FastAPI",     category: "Backend",   image: fastapi },
+  { id: 6, name: "Flask",       category: "Backend",   image: flask },
+  { id: 7, name: "PostgreSQL",  category: "Database",  image: postgres },
+  { id: 8, name: "Java",        category: "Systems",   image: java },
+  { id: 9, name: "C / C++",    category: "Systems",   image: c },
+];
 
+function Skills() {
   return (
-    <section className="min-h-screen bg-black text-white py-20 px-6 lg:px-28">
-      <h1 className="text-4xl font-bold mb-10 text-center">Skills</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-        {skills.map((skill) => (
-          <div
-            key={skill.id}
-            className="bg-white/10 border border-white/10 rounded-xl shadow-xl overflow-hidden hover:scale-105 transition duration-300"
-          >
-            {skill.image ? (
+    <section className="min-h-screen bg-white py-32 px-6 lg:px-28">
+      <div className="max-w-5xl mx-auto">
+
+        <p className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-4">Skills</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+          What I work with
+        </h1>
+        <p className="text-gray-500 mb-16 max-w-lg text-sm">
+          Languages, frameworks, and tools I use to build full-stack and security-focused software.
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {skills.map((skill) => (
+            <div
+              key={skill.id}
+              className="flex flex-col items-center gap-3 p-5 bg-gray-50 border border-gray-100 rounded-xl hover:border-gray-300 hover:shadow-sm transition-all duration-200"
+            >
               <img
                 src={skill.image}
-                alt={skill.skill_name}
-                className="w-full h-24 object-contain p-4"
+                alt={skill.name}
+                className="w-10 h-10 object-contain"
               />
-            ) : (
-              <div className="w-full h-24 flex items-center justify-center text-4xl bg-white/5">
-                💻
+              <div className="text-center">
+                <p className="text-sm font-semibold text-gray-800">{skill.name}</p>
+                <p className="text-xs text-gray-400 mt-0.5">{skill.category}</p>
               </div>
-            )}
-            <div className="p-4 text-center">
-              <p className="text-lg font-semibold">{skill.skill_name}</p>
-              <p className="text-sm text-purple-400 mt-1">{skill.category}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
     </section>
   );
