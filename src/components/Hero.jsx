@@ -56,16 +56,16 @@ function Hero() {
 
         <div className="mt-16 flex flex-wrap gap-10 text-sm border-t border-gray-100 pt-10">
           <div>
+            <p className="text-2xl font-bold text-gray-900">7+</p>
+            <p className="text-gray-400 mt-0.5">Projects Shipped</p>
+          </div>
+          <div>
             <p className="text-2xl font-bold text-gray-900">🏆 1</p>
             <p className="text-gray-400 mt-0.5">Hackathon Win</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-gray-900">4+</p>
-            <p className="text-gray-400 mt-0.5">Projects Shipped</p>
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-gray-900">Full-Stack</p>
-            <p className="text-gray-400 mt-0.5">Python · React · AI</p>
+            <p className="text-2xl font-bold text-gray-900">OSS</p>
+            <p className="text-gray-400 mt-0.5">Merged PR · Kestra 10k★</p>
           </div>
         </div>
 

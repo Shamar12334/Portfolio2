@@ -39,11 +39,10 @@ function About() {
             </div>
 
             <p className="text-gray-600 leading-relaxed text-base mb-8">
-              CS student with hands-on experience across full-stack development, cybersecurity, IoT, and AI.
-              I've shipped production apps using Python, FastAPI, React, and PostgreSQL — including a
-              hackathon-winning scam detection tool and a live SaaS product for behavioral health facilities.
-              I'm actively looking for an internship where I can contribute across multiple domains and
-              grow alongside experienced engineers.
+              CS student at FIU with hands-on experience in full-stack development, ML, IoT, and cybersecurity.
+              I founded CareLog Systems — a BLE-based patient care platform built for healthcare facilities. I've also contributed to open source, merging a PR into Kestra (10k+ GitHub stars),
+              and built an ML activity recognition system with 92% accuracy. I'm actively seeking an internship
+              where I can make a real impact.
             </p>
 
             <a

@@ -6,6 +6,28 @@ import care from "../assets/carelog.png";
 const projects = [
   {
     id: 1,
+    title: "CareLog Systems",
+    description:
+      "Founded and engineered a BLE-based patient care validation system for healthcare facilities. Built real-time indoor positioning, automated staff round logging, compliance monitoring dashboards, and a scalable FastAPI + PostgreSQL backend — eliminating manual documentation and improving audit readiness. Designed to scale across multiple locations.",
+    tech_stack: "React, FastAPI, PostgreSQL, Python, BLE",
+    github_url: "https://github.com/Shamar12334/carelog-web",
+    live_url: "https://www.carelogsystems.com",
+    image: care,
+    badge: { label: "Live Product", color: "blue" },
+  },
+  {
+    id: 2,
+    title: "Real-Time Human Activity Recognition",
+    description:
+      "Built a real-time activity recognition system using TensorFlow and OpenCV that classifies actions like walking, running, and jumping with 92% accuracy on webcam data. Collected and annotated 1,200+ video clips, and optimized the model with dropout and data augmentation — reducing misclassification by 28% and training time by 35%.",
+    tech_stack: "Python, TensorFlow, OpenCV, Flask",
+    github_url: null,
+    live_url: null,
+    image: null,
+    placeholder: { icon: "🤖", label: "ML / Computer Vision" },
+  },
+  {
+    id: 3,
     title: "ScamAware",
     description:
       "AI-powered scam detection tool that analyzes phone numbers, text messages, and emails to protect users from fraud. Built for the 305 HackShells hackathon hosted by Code Crunch — and took first place.",
@@ -14,32 +36,13 @@ const projects = [
     live_url: null,
     image: null,
     hackathon: "305 HackShells Winner",
-  },
-  {
-    id: 2,
-    title: "CareLog Systems",
-    description:
-      "Full-stack application for behavioral health facilities to manage staff rounds, log patient check-ins, track activity, and generate care reports. Supports team collaboration across free, facility, and enterprise tiers.",
-    tech_stack: "React, FastAPI, PostgreSQL, Python",
-    github_url: "https://github.com/Shamar12334/carelog-web",
-    live_url: "https://www.carelogsystems.com",
-    image: care,
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    description:
-      "This portfolio — a full-stack application with a FastAPI backend, PostgreSQL database, React frontend, and a protected admin portal for managing all content dynamically.",
-    tech_stack: "React, FastAPI, PostgreSQL, Tailwind",
-    github_url: "https://github.com/Shamar12334/Portfolio2",
-    live_url: null,
-    image: portfolio,
+    placeholder: { icon: "🛡️", label: "Security Tool" },
   },
   {
     id: 4,
     title: "Gamified Habit Tracker",
     description:
-      "RPG-style habit tracking app built as a capstone project. Users build a character, complete daily quests, unlock achievements, and compete on a leaderboard as they level up through habit completion.",
+      "RPG-style habit tracking app — users build a character, complete daily quests, unlock achievements, and compete on a leaderboard as they level up through habit completion.",
     tech_stack: "React, Python, Django, Node.js",
     github_url: "https://github.com/bryanfernandez-eng/gamified-habit-tracker",
     live_url: null,
@@ -59,6 +62,16 @@ const projects = [
   },
   {
     id: 6,
+    title: "Portfolio Website",
+    description:
+      "This portfolio — React frontend with a FastAPI backend, PostgreSQL database, and a protected admin portal for managing all content dynamically.",
+    tech_stack: "React, FastAPI, PostgreSQL, Tailwind",
+    github_url: "https://github.com/Shamar12334/Portfolio2",
+    live_url: "https://www.shamar-weekes.com",
+    image: portfolio,
+  },
+  {
+    id: 7,
     title: "Vertical Mass Measuring Device",
     description:
       "Programmed an ESP32 microcontroller to calculate the mass of an unknown object through oscillatory motion — designed to operate during a rocket launch.",
@@ -74,11 +87,7 @@ function ProjectCard({ project }) {
     <div className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:border-gray-300 hover:shadow-md transition-all duration-200 bg-white">
 
       {project.image ? (
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-44 object-cover"
-        />
+        <img src={project.image} alt={project.title} className="w-full h-44 object-cover" />
       ) : (
         <div className="w-full h-36 bg-gray-50 border-b border-gray-100 flex flex-col items-center justify-center gap-2">
           <span className="text-3xl">{project.placeholder?.icon ?? "💻"}</span>
@@ -88,11 +97,18 @@ function ProjectCard({ project }) {
 
       <div className="p-6 flex flex-col flex-1">
 
-        {project.hackathon && (
-          <span className="inline-flex items-center gap-1.5 self-start mb-3 px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-            🏆 {project.hackathon}
-          </span>
-        )}
+        <div className="flex flex-wrap gap-2 mb-3">
+          {project.hackathon && (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+              🏆 {project.hackathon}
+            </span>
+          )}
+          {project.badge && (
+            <span className="inline-flex items-center px-2.5 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold rounded-full">
+              {project.badge.label}
+            </span>
+          )}
+        </div>
 
         <h2 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h2>
         <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">{project.description}</p>
@@ -109,22 +125,14 @@ function ProjectCard({ project }) {
 
         <div className="flex gap-3">
           {project.github_url && (
-            <a
-              href={project.github_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors"
-            >
+            <a href={project.github_url} target="_blank" rel="noopener noreferrer"
+              className="flex-1 text-center px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
               GitHub
             </a>
           )}
           {project.live_url && (
-            <a
-              href={project.live_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center px-4 py-2 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:border-gray-400 hover:text-gray-900 transition-colors"
-            >
+            <a href={project.live_url} target="_blank" rel="noopener noreferrer"
+              className="flex-1 text-center px-4 py-2 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:border-gray-400 hover:text-gray-900 transition-colors">
               Live ↗
             </a>
           )}
@@ -147,7 +155,7 @@ function Projects() {
           What I've built
         </h1>
         <p className="text-gray-500 mb-16 max-w-lg text-sm">
-          A selection of projects spanning web applications, security tools, and embedded systems.
+          Production apps, ML systems, security tools, and embedded projects.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
