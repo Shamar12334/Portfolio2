@@ -36,11 +36,11 @@ function About() {
             </div>
 
             <p className="text-gray-600 leading-relaxed text-base mb-8">
-              I'm a Computer Science student with a background spanning full-stack development,
-              IoT systems, AI integration, and cybersecurity. I've built production-ready applications
-              using Python, FastAPI, React, and PostgreSQL, and have hands-on experience integrating
-              hardware like BLE beacons into real-world systems. I'm actively seeking an internship
-              where I can contribute across multiple domains and make a real impact alongside experienced engineers.
+              CS student with hands-on experience across full-stack development, cybersecurity, IoT, and AI.
+              I've shipped production apps using Python, FastAPI, React, and PostgreSQL — including a
+              hackathon-winning scam detection tool and a live SaaS product for behavioral health facilities.
+              I'm actively looking for an internship where I can contribute across multiple domains and
+              grow alongside experienced engineers.
             </p>
 
             <a

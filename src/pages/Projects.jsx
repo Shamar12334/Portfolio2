@@ -57,7 +57,10 @@ function ProjectCard({ project }) {
           className="w-full h-44 object-cover"
         />
       ) : (
-        <div className="w-full h-2 bg-gray-900" />
+        <div className="w-full h-36 bg-gray-50 border-b border-gray-100 flex flex-col items-center justify-center gap-2">
+          <span className="text-3xl">🛡️</span>
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Security Tool</span>
+        </div>
       )}
 
       <div className="p-6 flex flex-col flex-1">

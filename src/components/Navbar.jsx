@@ -21,7 +21,7 @@ function Navbar() {
           Shamar Weekes
         </Link>
 
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {links.map(({ to, label }) => (
             <Link
               key={to}
@@ -34,6 +34,15 @@ function Navbar() {
             </Link>
           ))}
         </div>
+
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center px-4 py-1.5 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:border-gray-400 hover:text-gray-900 transition-colors"
+        >
+          Resume ↗
+        </a>
 
         <button
           className="md:hidden text-gray-700 text-xl"
@@ -55,6 +64,15 @@ function Navbar() {
               {label}
             </Link>
           ))}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Resume ↗
+          </a>
         </div>
       )}
     </nav>
