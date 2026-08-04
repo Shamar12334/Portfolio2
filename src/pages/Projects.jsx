@@ -6,8 +6,8 @@ import care from "../assets/carelog.png";
 const carelog = {
   title: "CareLog Systems",
   description:
-    "Founded and engineered a patient care validation system for healthcare facilities. Built real-time staff round logging, indoor positioning, compliance monitoring dashboards, and a scalable FastAPI + PostgreSQL backend — eliminating manual documentation and improving audit readiness. Designed to scale across multiple locations.",
-  tech_stack: "React, FastAPI, PostgreSQL, Python",
+    "Founded and engineered a HIPAA-track patient care validation platform for healthcare facilities. Built BLE-based indoor presence tracking (staff badges + room beacons over MQTT) that auto-logs staff rounds in real time, compliance dashboards, CSV/PDF reporting, and a web + mobile (React Native) app. Backend runs on FastAPI + PostgreSQL with per-org field-level encryption, audit logging, and role-based access control. Load-tested at 100 concurrent users with zero failures, and migrated production infrastructure to GCP (Cloud Run + Cloud SQL) under a signed BAA.",
+  tech_stack: "React, React Native, FastAPI, PostgreSQL, MQTT, GCP, Python",
   github_url: "https://github.com/Shamar12334/carelog-web",
   live_url: "https://www.carelogsystems.com",
   image: care,

@@ -18,8 +18,8 @@ const featured = [
   {
     id: 2,
     title: "CareLog Systems",
-    description: "Full-stack SaaS for behavioral health facilities — staff rounds, patient check-ins, care reports, and team collaboration.",
-    tech_stack: "React, FastAPI, PostgreSQL, Python",
+    description: "HIPAA-track SaaS for healthcare facilities — BLE-based staff presence tracking, automated round logging, compliance reporting, and a web + mobile app.",
+    tech_stack: "React, React Native, FastAPI, PostgreSQL, MQTT, GCP",
     github_url: "https://github.com/Shamar12334/carelog-web",
     live_url: "https://www.carelogsystems.com",
     image: care,
