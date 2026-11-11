@@ -17,11 +17,11 @@ const featured = [
   },
   {
     id: 2,
-    title: "CareLog Systems",
+    title: "CareLog",
     description: "HIPAA-track SaaS for healthcare facilities — BLE-based staff presence tracking, automated round logging, compliance reporting, and a web + mobile app.",
     tech_stack: "React, React Native, FastAPI, PostgreSQL, MQTT, GCP",
     github_url: "https://github.com/Shamar12334/carelog-web",
-    live_url: "https://www.carelogsystems.com",
+    live_url: "https://carelog-pearl.vercel.app/",
     image: care,
   },
   {

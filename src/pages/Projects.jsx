@@ -3,17 +3,17 @@ import portfolio from "../assets/portfolio.png";
 import vmmd from "../assets/IMG_5708.PNG";
 import care from "../assets/carelog.png";
 
-const carelog = {
-  title: "CareLog Systems",
-  description:
-    "Founded and engineered a HIPAA-track patient care validation platform for healthcare facilities. Built BLE-based indoor presence tracking (staff badges + room beacons over MQTT) that auto-logs staff rounds in real time, compliance dashboards, CSV/PDF reporting, and a web + mobile (React Native) app. Backend runs on FastAPI + PostgreSQL with per-org field-level encryption, audit logging, and role-based access control. Load-tested at 100 concurrent users with zero failures, and migrated production infrastructure to GCP (Cloud Run + Cloud SQL) under a signed BAA.",
-  tech_stack: "React, React Native, FastAPI, PostgreSQL, MQTT, GCP, Python",
-  github_url: "https://github.com/Shamar12334/carelog-web",
-  live_url: "https://www.carelogsystems.com",
-  image: care,
-};
-
 const projects = [
+  {
+    id: 0,
+    title: "CareLog",
+    description:
+      "Engineered a HIPAA-track patient care validation platform for healthcare facilities. Built BLE-based indoor presence tracking (staff badges + room beacons over MQTT) that auto-logs staff rounds in real time, compliance dashboards, CSV/PDF reporting, and a web + mobile (React Native) app. Backend runs on FastAPI + PostgreSQL with per-org field-level encryption, audit logging, and role-based access control. Load-tested at 100 concurrent users with zero failures, and migrated production infrastructure to GCP (Cloud Run + Cloud SQL) under a signed BAA.",
+    tech_stack: "React, React Native, FastAPI, PostgreSQL, MQTT, GCP, Python",
+    github_url: "https://github.com/Shamar12334/carelog-web",
+    live_url: "https://carelog-pearl.vercel.app/",
+    image: care,
+  },
   {
     id: 1,
     title: "Real-Time Human Activity Recognition",
@@ -143,67 +143,6 @@ function Projects() {
         <p className="text-gray-500 mb-16 max-w-lg text-sm">
           Production apps, ML systems, security tools, and embedded projects.
         </p>
-
-        {/* CareLog — featured startup */}
-        <div className="mb-6">
-          <div className="flex items-center gap-3 mb-4">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Startup</p>
-            <div className="flex-1 h-px bg-gray-100" />
-          </div>
-
-          <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-lg transition-all duration-200">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-
-              <img
-                src={carelog.image}
-                alt="CareLog Systems"
-                className="w-full h-64 lg:h-full object-cover"
-              />
-
-              <div className="p-8 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold rounded-full">
-                      Founder & Engineer
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-50 border border-green-200 text-green-700 text-xs font-semibold rounded-full">
-                      Live
-                    </span>
-                  </div>
-
-                  <h2 className="text-2xl font-bold text-gray-900 mb-3">CareLog Systems</h2>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-6">{carelog.description}</p>
-
-                  <div className="flex flex-wrap gap-1.5 mb-8">
-                    {carelog.tech_stack.split(",").map((tech, idx) => (
-                      <span key={idx} className="px-2.5 py-0.5 bg-gray-100 text-gray-600 rounded-md text-xs font-medium">
-                        {tech.trim()}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex gap-3">
-                  <a href={carelog.github_url} target="_blank" rel="noopener noreferrer"
-                    className="flex-1 text-center px-4 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
-                    GitHub
-                  </a>
-                  <a href={carelog.live_url} target="_blank" rel="noopener noreferrer"
-                    className="flex-1 text-center px-4 py-2.5 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:border-gray-900 hover:text-gray-900 transition-colors">
-                    carelogsystems.com ↗
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        {/* Rest of projects */}
-        <div className="flex items-center gap-3 mb-6 mt-12">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Other Projects</p>
-          <div className="flex-1 h-px bg-gray-100" />
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project) => (
